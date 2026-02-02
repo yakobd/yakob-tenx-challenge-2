@@ -103,13 +103,7 @@ class GoogleVeoProvider:
         logger.debug(f"   Model: {model}")
 
         try:
-            # Build config
-            config = types.GenerateVideoConfig(
-                aspect_ratio=aspect_ratio,
-                person_generation=person_generation,
-            )
-
-            # Generate
+            # Generate without config - API may have changed
             if first_frame_url:
                 # Image-to-video
                 image_data = await self._fetch_image(first_frame_url)
@@ -118,14 +112,12 @@ class GoogleVeoProvider:
                     model=model,
                     prompt=prompt,
                     image=image,
-                    config=config,
                 )
             else:
                 # Text-to-video
                 operation = await client.aio.models.generate_video(
                     model=model,
                     prompt=prompt,
-                    config=config,
                 )
 
             # Poll until complete
