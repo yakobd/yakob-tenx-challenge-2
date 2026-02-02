@@ -52,4 +52,5 @@
 - **YouTube Video**: https://youtu.be/JfEx5PAGqP4
   - **Title**: [TRP1] Yakob - AI Generated Music Video with FFmpeg Combination
   - **Status**: ✅ UPLOADED - Complete technical demonstration with problem-solving documentation
-- **GitHub Repo**: Current workspace with all artifacts and documentation
+- **GitHub Repo**: https://github.com/yakobd/yakob-tenx-challenge-2
+  - **Status**: ✅ PUSHED - Complete codebase with all artifacts and documentation
